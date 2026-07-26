@@ -7,6 +7,71 @@
  * Only use values from variables.css - never hardcode.
  */
 
+/* ===================== BUTTONS ===================== */
+.btn {
+  align-items: center;
+  border: calc(var(--space-1) / 4) solid transparent;
+  border-radius: var(--radius-full);
+  cursor: pointer;
+  display: inline-flex;
+  font-family: var(--font-body);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-semibold);
+  gap: var(--space-1);
+  justify-content: center;
+  letter-spacing: var(--letter-spacing-wide);
+  padding: var(--space-2) var(--space-4);
+  text-decoration: none;
+  transition: all var(--transition-fast);
+  white-space: nowrap;
+}
+
+.btn--primary {
+  background: var(--color-primary);
+  border-color: var(--color-primary);
+  color: var(--color-white);
+}
+
+.btn--primary:hover {
+  background: var(--color-primary-dark);
+  border-color: var(--color-primary-dark);
+  color: var(--color-white);
+}
+
+.btn--secondary {
+  background: transparent;
+  border-color: var(--color-primary);
+  color: var(--color-primary);
+}
+
+.btn--secondary:hover {
+  background: var(--color-primary);
+  color: var(--color-white);
+}
+
+.btn--light,
+.btn--secondary.btn--light {
+  border-color: var(--color-white);
+  color: var(--color-white);
+}
+
+.btn--light:hover,
+.btn--secondary.btn--light:hover {
+  background: var(--color-white);
+  color: var(--color-text);
+}
+
+.btn--text {
+  background: transparent;
+  border-color: transparent;
+  color: var(--color-primary);
+  padding-inline: 0;
+}
+
+.btn--text:hover {
+  text-decoration: underline;
+}
+
 /* ===================== HEADER ===================== */
 .header {
   background: transparent;
@@ -382,5 +447,64 @@
 @media (min-width: 1024px) {
   .footer__grid {
     grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+/* ===================== HERO ===================== */
+.hero__text {
+  max-width: var(--container-narrow);
+  position: relative;
+}
+
+.hero__label {
+  color: var(--color-accent);
+  display: inline-block;
+  font-family: var(--font-body);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-semibold);
+  letter-spacing: var(--letter-spacing-widest);
+  margin-bottom: var(--space-3);
+  text-transform: uppercase;
+}
+
+.hero__headline {
+  color: var(--color-white);
+  font-family: var(--font-heading);
+  font-size: var(--font-size-4xl);
+  font-weight: var(--font-weight-bold);
+  letter-spacing: var(--letter-spacing-tight);
+  line-height: var(--line-height-tight);
+  margin-bottom: var(--space-3);
+  max-width: none;
+}
+
+.hero__subheadline {
+  color: rgba(255, 255, 255, 0.85);
+  font-size: var(--font-size-md);
+  line-height: var(--line-height-loose);
+  margin-bottom: var(--space-5);
+  max-width: calc(var(--space-8) + var(--space-8) + var(--space-8) + var(--space-8) + var(--space-5));
+}
+
+.hero__ctas {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+}
+
+.hero__bg--placeholder {
+  background: linear-gradient(135deg, var(--color-primary), var(--color-primary-dark));
+  height: 100%;
+  width: 100%;
+}
+
+@media (min-width: 1024px) {
+  .hero__headline {
+    font-size: var(--font-size-5xl);
+  }
+
+  .hero__subheadline {
+    font-size: var(--font-size-lg);
   }
 }
