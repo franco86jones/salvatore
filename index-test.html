@@ -13,6 +13,130 @@
   <link rel="stylesheet" href="assets/css/animations.css">
   <link rel="stylesheet" href="assets/css/responsive.css">
   <style>
+    /* ===================== HERO TEST ===================== */
+    .btn {
+      align-items: center;
+      border-radius: var(--radius-full);
+      display: inline-flex;
+      font-family: var(--font-body);
+      font-size: var(--font-size-sm);
+      font-weight: var(--font-weight-semibold);
+      justify-content: center;
+      line-height: var(--line-height-tight);
+      min-height: var(--space-5);
+      padding: var(--space-2) var(--space-4);
+      transition:
+        background var(--transition-fast),
+        border-color var(--transition-fast),
+        color var(--transition-fast);
+    }
+
+    .btn--primary {
+      background: var(--color-primary);
+      color: var(--color-white);
+    }
+
+    .btn--primary:hover {
+      background: var(--color-primary-dark);
+      color: var(--color-white);
+    }
+
+    .btn--secondary {
+      border: 1px solid var(--color-white);
+      color: var(--color-white);
+    }
+
+    .btn--secondary:hover {
+      background: var(--color-white);
+      color: var(--color-text);
+    }
+
+    .hero {
+      align-items: center;
+      display: flex;
+      min-height: 70vh;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .hero__bg,
+    .hero__overlay {
+      inset: 0;
+      position: absolute;
+    }
+
+    .hero__bg img {
+      height: 100%;
+      object-fit: cover;
+      object-position: center center;
+      width: 100%;
+    }
+
+    .hero__overlay {
+      background: var(--color-overlay);
+    }
+
+    .hero__content {
+      display: flex;
+      flex-direction: column;
+      gap: var(--space-3);
+      margin-inline: auto;
+      max-width: 620px;
+      position: relative;
+      text-align: center;
+      z-index: 2;
+    }
+
+    .hero__eyebrow {
+      color: var(--color-secondary);
+      font-family: var(--font-body);
+      font-size: var(--font-size-sm);
+      font-weight: var(--font-weight-semibold);
+      letter-spacing: var(--letter-spacing-widest);
+      text-transform: uppercase;
+    }
+
+    .hero h1 {
+      color: var(--color-background);
+      font-size: var(--font-size-4xl);
+    }
+
+    .hero p {
+      color: var(--color-secondary);
+      font-size: var(--font-size-md);
+      margin-bottom: 0;
+      max-width: 55ch;
+    }
+
+    .hero__actions {
+      display: flex;
+      flex-direction: column;
+      gap: var(--space-3);
+    }
+
+    @media (min-width: 640px) {
+      .hero__actions {
+        align-items: center;
+        flex-direction: row;
+        justify-content: center;
+      }
+    }
+
+    @media (min-width: 1024px) {
+      .hero {
+        min-height: 90vh;
+      }
+
+      .hero__content {
+        margin-inline: 0;
+        text-align: left;
+      }
+
+      .hero__actions {
+        justify-content: flex-start;
+      }
+    }
+
     /* ===================== FOOTER TEST ===================== */
     .footer {
       background: var(--color-text);
@@ -200,6 +324,39 @@
   </header>
   <!-- MAIN CONTENT -->
   <main>
+    <section class="hero">
+      <div class="hero__bg">
+        <picture>
+          <img
+            src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1920' height='1080' viewBox='0 0 1920 1080'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop stop-color='%2359403a'/%3E%3Cstop offset='.55' stop-color='%232c2421'/%3E%3Cstop offset='1' stop-color='%231c1c1c'/%3E%3C/linearGradient%3E%3CradialGradient id='cheese' cx='.4' cy='.35' r='.65'%3E%3Cstop stop-color='%23fff7d6'/%3E%3Cstop offset='1' stop-color='%23cfa84a'/%3E%3C/radialGradient%3E%3C/defs%3E%3Crect width='1920' height='1080' fill='url(%23g)'/%3E%3Cellipse cx='1240' cy='650' rx='460' ry='170' fill='%23512a22' opacity='.75'/%3E%3Ccircle cx='1080' cy='580' r='145' fill='url(%23cheese)'/%3E%3Cpath d='M1185 455l290 95-330 155z' fill='%23f2d070'/%3E%3Ccircle cx='1242' cy='555' r='18' fill='%23b4812d' opacity='.55'/%3E%3Ccircle cx='1324' cy='584' r='24' fill='%23b4812d' opacity='.45'/%3E%3Ccircle cx='1184' cy='628' r='15' fill='%23b4812d' opacity='.5'/%3E%3Ccircle cx='1445' cy='640' r='74' fill='%23f6e6a8'/%3E%3Ccircle cx='1518' cy='600' r='52' fill='%23efe4ca'/%3E%3Cpath d='M0 780c250-120 466-126 648-18 216 128 466 118 750-30 188-98 362-106 522-24v372H0z' fill='%23171413' opacity='.52'/%3E%3C/svg%3E"
+            alt="Selecci&oacute;n de quesos artesanales Delicatessen Salvatore"
+            width="1920"
+            height="1080"
+            loading="eager"
+            fetchpriority="high"
+          >
+        </picture>
+      </div>
+
+      <div class="hero__overlay"></div>
+
+      <div class="container">
+        <div class="hero__content">
+          <span class="hero__eyebrow">Desde 2012</span>
+
+          <h1>Quesos Artesanales para los Paladares M&aacute;s Exigentes</h1>
+
+          <p>
+            Elaboramos quesos artesanales con ingredientes cuidadosamente seleccionados, procesos tradicionales y un compromiso absoluto con la calidad.
+          </p>
+
+          <div class="hero__actions">
+            <a href="productos/" class="btn btn--primary">Explorar Productos</a>
+            <a href="nosotros/" class="btn btn--secondary">Nuestra Historia</a>
+          </div>
+        </div>
+      </div>
+    </section>
   </main>
   <!-- FOOTER -->
   <footer class="footer">
