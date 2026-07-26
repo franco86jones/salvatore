@@ -1,1 +1,301 @@
-/* LAYOUT - Container, grid systems (2-col, 3-col, 4-col, masonry) */
+/**
+ * layout.css
+ * Delicatessen Salvatore
+ *
+ * Structural layout systems: containers, sections, grids, wrappers, and accessibility helpers.
+ * Loaded after base.css and before component, utility, animation, and responsive styles.
+ * No colors, typography, or shadows in this file — layout only.
+ */
+
+
+/* =====================
+   HEADER HEIGHT
+   Referenced by components that need to offset below the sticky header
+   ===================== */
+
+:root {
+  --header-height: calc(var(--space-6) + var(--space-2)); /* 80px */
+}
+
+
+/* =====================
+   CONTAINER
+   ===================== */
+
+.container,
+.container--wide,
+.container--narrow {
+  margin-inline: auto;
+  padding-inline: var(--space-3);
+  width: 100%;
+}
+
+.container {
+  max-width: var(--container-content);
+}
+
+.container--wide {
+  max-width: var(--container-max);
+}
+
+.container--narrow {
+  max-width: var(--container-narrow);
+}
+
+
+/* =====================
+   SECTION
+   ===================== */
+
+.section {
+  padding-block: var(--space-5);
+}
+
+.section--sm {
+  padding-block: var(--space-4);
+}
+
+.section--lg {
+  padding-block: var(--space-6);
+}
+
+.section--with-header-offset {
+  padding-top: var(--header-height);
+}
+
+
+/* =====================
+   GRID SYSTEMS
+   Mobile-first: single column base, expanding at breakpoints
+   ===================== */
+
+.grid-2,
+.grid-3,
+.grid-4 {
+  display: grid;
+  gap: var(--space-4);
+  grid-template-columns: 1fr;
+}
+
+/* Auto-fill grid — for product cards and gallery where count varies */
+.grid-auto {
+  display: grid;
+  gap: var(--space-4);
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 280px), 1fr));
+}
+
+
+/* =====================
+   TWO COLUMN LAYOUT
+   Used for: About, Story, Wholesale, Contact
+   ===================== */
+
+.layout-two-col {
+  display: grid;
+  gap: var(--space-6);
+  grid-template-columns: 1fr;
+}
+
+/* Reverses column order on desktop — content left, image right */
+.layout-two-col--reverse {
+  direction: rtl;
+}
+
+.layout-two-col--reverse > * {
+  direction: ltr;
+}
+
+
+/* =====================
+   FLEX UTILITIES
+   For alignment and single-axis layouts only
+   ===================== */
+
+.flex {
+  display: flex;
+}
+
+.flex-center {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+
+.flex-between {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+}
+
+.flex-col {
+  display: flex;
+  flex-direction: column;
+}
+
+.flex-wrap {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+
+/* =====================
+   HERO LAYOUT
+   ===================== */
+
+.hero {
+  align-items: center;
+  display: flex;
+  min-height: 70vh;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+}
+
+.hero--short {
+  min-height: 40vh;
+}
+
+.hero__bg,
+.hero__overlay {
+  inset: 0;
+  position: absolute;
+}
+
+.hero__bg {
+  height: 100%;
+  width: 100%;
+  z-index: 0;
+}
+
+.hero__bg img {
+  height: 100%;
+  object-fit: cover;
+  width: 100%;
+}
+
+.hero__overlay {
+  background: var(--color-overlay);
+  z-index: 1;
+}
+
+.hero__content {
+  position: relative;
+  width: 100%;
+  z-index: 2;
+}
+
+
+/* =====================
+   MASONRY GRID
+   Used for gallery and Instagram feed
+   ===================== */
+
+.masonry {
+  column-count: 1;
+  column-gap: var(--space-3);
+}
+
+.masonry__item {
+  break-inside: avoid;
+  margin-bottom: var(--space-3);
+}
+
+
+/* =====================
+   ASPECT RATIO HELPERS
+   Used on image wrappers to reserve space before images load
+   ===================== */
+
+.ratio-square     { aspect-ratio: 1 / 1; }
+.ratio-landscape  { aspect-ratio: 16 / 9; }
+.ratio-portrait   { aspect-ratio: 3 / 4; }
+.ratio-wide       { aspect-ratio: 21 / 9; }
+
+
+/* =====================
+   VISUALLY HIDDEN
+   Accessible to screen readers, invisible to sighted users
+   ===================== */
+
+.sr-only {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
+
+/* =====================
+   RESPONSIVE — TABLET (640px+)
+   ===================== */
+
+@media (min-width: 640px) {
+
+  .container,
+  .container--wide,
+  .container--narrow {
+    padding-inline: var(--space-5);
+  }
+
+  .grid-2,
+  .grid-3,
+  .grid-4 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .masonry {
+    column-count: 2;
+  }
+
+}
+
+
+/* =====================
+   RESPONSIVE — DESKTOP (1024px+)
+   ===================== */
+
+@media (min-width: 1024px) {
+
+  .section {
+    padding-block: var(--space-7);
+  }
+
+  .section--sm {
+    padding-block: var(--space-5);
+  }
+
+  .section--lg {
+    padding-block: var(--space-8);
+  }
+
+  .grid-3 {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .grid-4 {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .layout-two-col {
+    align-items: center;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .hero {
+    min-height: 90vh;
+  }
+
+  .hero--short {
+    min-height: 50vh;
+  }
+
+  .masonry {
+    column-count: 3;
+  }
+
+}
