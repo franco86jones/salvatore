@@ -1,0 +1,8 @@
+{
+  "name": "Delicatessen Salvatore",
+  "short_name": "Salvatore",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#6B1F2A"
+}
