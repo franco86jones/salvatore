@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="800" viewBox="0 0 600 800">
+  <defs>
+    <linearGradient id="base" x1="0" y1="800" x2="600" y2="0" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#b39035"/>
+      <stop offset="0.34" stop-color="#d2b66a"/>
+      <stop offset="0.58" stop-color="#ead7ad"/>
+      <stop offset="0.78" stop-color="#fff5df"/>
+      <stop offset="1" stop-color="#fffefa"/>
+    </linearGradient>
+    <radialGradient id="topGlow" cx="87%" cy="4%" r="72%">
+      <stop offset="0" stop-color="#ffffff" stop-opacity="1"/>
+      <stop offset="0.42" stop-color="#fffefa" stop-opacity="0.96"/>
+      <stop offset="0.72" stop-color="#fffefa" stop-opacity="0.38"/>
+      <stop offset="1" stop-color="#fffefa" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="topWash" x1="0" y1="0" x2="0" y2="420" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#ffffff" stop-opacity="0.98"/>
+      <stop offset="0.42" stop-color="#fffefa" stop-opacity="0.82"/>
+      <stop offset="0.72" stop-color="#fff8e8" stop-opacity="0.34"/>
+      <stop offset="1" stop-color="#fff8e8" stop-opacity="0"/>
+    </linearGradient>
+    <radialGradient id="bottomDepth" cx="0%" cy="100%" r="76%">
+      <stop offset="0" stop-color="#806316" stop-opacity="0.46"/>
+      <stop offset="0.42" stop-color="#b39035" stop-opacity="0.22"/>
+      <stop offset="1" stop-color="#b39035" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="600" height="800" fill="url(#base)"/>
+  <rect width="600" height="800" fill="url(#topGlow)"/>
+  <rect width="600" height="800" fill="url(#topWash)"/>
+  <rect width="600" height="800" fill="url(#bottomDepth)"/>
+</svg>
