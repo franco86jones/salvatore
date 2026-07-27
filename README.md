@@ -10,9 +10,10 @@ Premium artisan cheese producer. Jalisco, Mexico.
 - `/` — Inicio (Homepage)
 - `/nosotros/` — Nosotros
 - `/productos/` — Productos
-- `/productos/cabra/` — Quesos de Cabra
-- `/productos/vaca/` — Quesos de Vaca
-- `/productos/oveja/` — Quesos de Oveja
+- `/productos/leche-de-vaca/` — Quesos de Vaca
+- `/productos/leche-de-cabra/` — Quesos de Cabra
+- `/productos/leche-de-oveja/` — Quesos de Oveja
+- `/productos/especialidades/` — Especialidades
 - `/recetas/` — Recetas
 - `/distribucion/` — Distribución
 - `/galeria/` — Galería
