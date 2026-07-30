@@ -1299,3 +1299,101 @@
   color: var(--color-primary);
   text-decoration: underline;
 }
+
+/* ===================== PRODUCT DETAIL ===================== */
+.product-detail__image-wrap {
+  aspect-ratio: 3 / 4;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+}
+
+.product-detail__image {
+  height: 100%;
+  object-fit: cover;
+  width: 100%;
+}
+
+.product-detail__content {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  justify-content: center;
+}
+
+.product-detail__category {
+  color: var(--color-accent);
+  display: inline-block;
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-semibold);
+  letter-spacing: var(--letter-spacing-widest);
+  text-transform: uppercase;
+}
+
+.product-detail__name {
+  color: var(--color-text);
+  font-family: var(--font-heading);
+  font-size: var(--font-size-4xl);
+  font-weight: var(--font-weight-bold);
+  letter-spacing: var(--letter-spacing-tight);
+  line-height: var(--line-height-tight);
+  max-width: none;
+}
+
+.product-detail__divider {
+  background: var(--color-primary);
+  border-radius: var(--radius-full);
+  height: calc(var(--space-1) / 2);
+  width: calc(var(--space-6) - calc(var(--space-1) / 2));
+}
+
+.product-detail__description {
+  color: var(--color-text);
+  font-size: var(--font-size-md);
+  line-height: var(--line-height-loose);
+  max-width: none;
+}
+
+.product-detail__ctas {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+  margin-top: var(--space-2);
+}
+
+/* ===================== FLAVOR CARD ===================== */
+.flavor-card {
+  background: var(--color-background);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+  overflow: hidden;
+  transition:
+    box-shadow var(--transition-base),
+    transform var(--transition-base);
+}
+
+.flavor-card:hover {
+  box-shadow: var(--shadow-lg);
+  transform: translateY(calc(var(--space-1) / -2));
+}
+
+.flavor-card__color {
+  height: calc(var(--space-5) + var(--space-4));
+  width: 100%;
+}
+
+.flavor-card__name {
+  color: var(--color-text);
+  font-family: var(--font-heading);
+  font-size: var(--font-size-xl);
+  font-weight: var(--font-weight-bold);
+  max-width: none;
+  padding: var(--space-3) var(--space-3) var(--space-1);
+}
+
+.flavor-card__description {
+  color: var(--color-text-light);
+  font-size: var(--font-size-sm);
+  line-height: var(--line-height-loose);
+  max-width: none;
+  padding: 0 var(--space-3) var(--space-3);
+}
