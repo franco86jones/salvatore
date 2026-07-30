@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="800" viewBox="0 0 600 800" fill="none">
+  <defs>
+    <linearGradient id="waveStroke" x1="54" y1="0" x2="442" y2="0" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#B8A89B" stop-opacity="0"/>
+      <stop offset="0.14" stop-color="#B8A89B" stop-opacity="0.33"/>
+      <stop offset="0.58" stop-color="#B8A89B" stop-opacity="0.35"/>
+      <stop offset="1" stop-color="#B8A89B" stop-opacity="0"/>
+    </linearGradient>
+    <filter id="soften" x="20" y="120" width="470" height="210" filterUnits="userSpaceOnUse">
+      <feGaussianBlur stdDeviation="0.22"/>
+    </filter>
+  </defs>
+  <g filter="url(#soften)" stroke="url(#waveStroke)" stroke-linecap="round">
+    <path d="M55 212C105 177 158 171 211 198C255 220 282 249 342 247C379 246 407 232 440 205" stroke-width="1.25"/>
+    <path d="M58 214C108 180 159 176 209 201C252 223 284 250 342 249C376 248 405 235 437 209" stroke-width="2.5" opacity="0.45"/>
+
+    <path d="M51 244C108 203 164 205 221 238C274 269 304 286 362 280C395 277 421 260 451 237" stroke-width="1.35"/>
+    <path d="M55 247C111 209 165 211 219 241C272 270 304 287 360 283C393 280 419 265 448 242" stroke-width="2.7" opacity="0.42"/>
+
+    <path d="M61 277C118 235 179 242 235 280C286 316 322 331 385 318C415 312 440 292 465 272" stroke-width="1.3" opacity="0.9"/>
+    <path d="M65 281C121 241 178 247 233 284C284 318 323 333 383 322C413 316 438 298 461 278" stroke-width="2.55" opacity="0.34"/>
+  </g>
+</svg>
