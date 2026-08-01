@@ -1,1 +1,170 @@
-/* RESPONSIVE - Mobile-first breakpoints */
+/**
+ * responsive.css
+ * Delicatessen Salvatore
+ *
+ * Mobile-first edge-case tuning and responsive refinements.
+ */
+
+/* =====================
+   TYPOGRAPHY SCALING
+   ===================== */
+.hero__headline {
+  font-size: var(--font-size-3xl);
+}
+
+.section-title__heading {
+  font-size: var(--font-size-3xl);
+}
+
+.cta-banner__heading {
+  font-size: var(--font-size-2xl);
+}
+
+@media (min-width: 480px) {
+  .hero__headline {
+    font-size: var(--font-size-4xl);
+  }
+}
+
+@media (min-width: 1024px) {
+  .hero__headline {
+    font-size: var(--font-size-5xl);
+  }
+
+  .section-title__heading,
+  .cta-banner__heading {
+    font-size: var(--font-size-4xl);
+  }
+}
+
+/* =====================
+   HERO
+   ===================== */
+.hero__subheadline {
+  font-size: var(--font-size-base);
+}
+
+.hero__ctas {
+  flex-direction: column;
+}
+
+.hero__ctas .btn {
+  width: 100%;
+}
+
+@media (min-width: 640px) {
+  .hero__ctas {
+    flex-direction: row;
+  }
+
+  .hero__ctas .btn {
+    width: auto;
+  }
+}
+
+/* =====================
+   PROCESS STEPS
+   ===================== */
+.process-step {
+  grid-template-columns: 1fr;
+  padding-block: var(--space-4);
+}
+
+.process-step__number {
+  font-size: var(--font-size-2xl);
+}
+
+@media (min-width: 640px) {
+  .process-step {
+    grid-template-columns: calc(var(--space-6) + var(--space-2)) 1fr;
+    padding-block: var(--space-5);
+  }
+
+  .process-step__number {
+    font-size: var(--font-size-4xl);
+  }
+}
+
+/* =====================
+   PRODUCT DETAIL
+   ===================== */
+.product-detail__name {
+  font-size: var(--font-size-3xl);
+}
+
+@media (min-width: 1024px) {
+  .product-detail__name {
+    font-size: var(--font-size-4xl);
+  }
+}
+
+/* =====================
+   FOOTER
+   ===================== */
+.footer__bottom-inner {
+  align-items: center;
+  flex-direction: column;
+}
+
+.footer__copy {
+  text-align: center;
+}
+
+.footer__legal {
+  justify-content: center;
+}
+
+@media (min-width: 640px) {
+  .footer__bottom-inner {
+    flex-direction: row;
+  }
+
+  .footer__copy {
+    text-align: left;
+  }
+}
+
+/* =====================
+   CONTACT FORM
+   ===================== */
+.contact-form-section__form-wrap {
+  padding: var(--space-3);
+}
+
+@media (min-width: 640px) {
+  .contact-form-section__form-wrap {
+    padding: var(--space-5);
+  }
+}
+
+/* =====================
+   CATEGORY CARDS
+   ===================== */
+.category-card__title {
+  font-size: var(--font-size-2xl);
+}
+
+@media (min-width: 640px) {
+  .category-card__title {
+    font-size: var(--font-size-3xl);
+  }
+}
+
+/* =====================
+   BREADCRUMB
+   ===================== */
+
+/* Breadcrumbs wrap naturally via layout.css. No truncation needed. */
+
+/* =====================
+   HEADER
+   ===================== */
+.header__logo img {
+  height: var(--space-4);
+}
+
+@media (min-width: 640px) {
+  .header__logo img {
+    height: var(--space-5);
+  }
+}

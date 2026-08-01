@@ -1,1 +1,101 @@
-/* ANIMATIONS - Fade, slide, scale, hover transitions */
+/**
+ * animations.css
+ * Delicatessen Salvatore
+ *
+ * Scroll-triggered entrance animation states.
+ */
+
+/* =====================
+   BASE ANIMATION SETUP
+   ===================== */
+.animate-fade-up,
+.animate-fade-in,
+.animate-fade-left,
+.animate-fade-right,
+.animate-scale-up,
+.animate-stagger > * {
+  opacity: 0;
+  transition:
+    opacity var(--transition-slow),
+    transform var(--transition-slow);
+  transition-delay: var(--stagger-delay, 0ms);
+  will-change: opacity, transform;
+}
+
+/* =====================
+   ANIMATION VARIANTS
+   ===================== */
+.animate-fade-up,
+.animate-stagger > * {
+  transform: translateY(var(--space-3));
+}
+
+.animate-fade-in {
+  transform: none;
+}
+
+.animate-fade-left {
+  transform: translateX(calc(var(--space-3) / -1));
+}
+
+.animate-fade-right {
+  transform: translateX(var(--space-3));
+}
+
+.animate-scale-up {
+  transform: scale(0.95);
+}
+
+.animate-fade-up.is-visible,
+.animate-fade-in.is-visible,
+.animate-fade-left.is-visible,
+.animate-fade-right.is-visible,
+.animate-scale-up.is-visible,
+.animate-stagger.is-visible > * {
+  opacity: 1;
+  transform: none;
+}
+
+/* =====================
+   STAGGERED CHILDREN
+   ===================== */
+.animate-stagger > *:nth-child(1) {
+  --stagger-delay: 0ms;
+}
+
+.animate-stagger > *:nth-child(2) {
+  --stagger-delay: 100ms;
+}
+
+.animate-stagger > *:nth-child(3) {
+  --stagger-delay: 200ms;
+}
+
+.animate-stagger > *:nth-child(4) {
+  --stagger-delay: 300ms;
+}
+
+.animate-stagger > *:nth-child(5) {
+  --stagger-delay: 400ms;
+}
+
+.animate-stagger > *:nth-child(6) {
+  --stagger-delay: 500ms;
+}
+
+/* =====================
+   REDUCED MOTION
+   ===================== */
+@media (prefers-reduced-motion: reduce) {
+  .animate-fade-up,
+  .animate-fade-in,
+  .animate-fade-left,
+  .animate-fade-right,
+  .animate-scale-up,
+  .animate-stagger > * {
+    opacity: 1;
+    transform: none;
+    transition: none;
+    will-change: auto;
+  }
+}

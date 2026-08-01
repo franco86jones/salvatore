@@ -1,1 +1,305 @@
-/* UTILITIES - Helper classes */
+/**
+ * utilities.css
+ * Delicatessen Salvatore
+ *
+ * Single-purpose helper classes for small layout, text, and visual adjustments.
+ */
+
+/* =====================
+   DISPLAY
+   ===================== */
+.hidden {
+  display: none;
+}
+
+.block {
+  display: block;
+}
+
+.inline-block {
+  display: inline-block;
+}
+
+/* =====================
+   TEXT ALIGNMENT
+   ===================== */
+.text-left {
+  text-align: left;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-right {
+  text-align: right;
+}
+
+/* =====================
+   TEXT COLORS
+   ===================== */
+.text-primary {
+  color: var(--color-primary);
+}
+
+.text-accent {
+  color: var(--color-accent);
+}
+
+.text-light {
+  color: var(--color-text-light);
+}
+
+.text-white {
+  color: var(--color-white);
+}
+
+.text-muted {
+  color: var(--color-text-light);
+  opacity: 0.7;
+}
+
+/* =====================
+   FONT SIZES
+   ===================== */
+.text-xs {
+  font-size: var(--font-size-xs);
+}
+
+.text-sm {
+  font-size: var(--font-size-sm);
+}
+
+.text-base {
+  font-size: var(--font-size-base);
+}
+
+.text-md {
+  font-size: var(--font-size-md);
+}
+
+.text-lg {
+  font-size: var(--font-size-lg);
+}
+
+.text-xl {
+  font-size: var(--font-size-xl);
+}
+
+/* =====================
+   FONT WEIGHTS
+   ===================== */
+.font-regular {
+  font-weight: var(--font-weight-regular);
+}
+
+.font-medium {
+  font-weight: var(--font-weight-medium);
+}
+
+.font-semibold {
+  font-weight: var(--font-weight-semibold);
+}
+
+.font-bold {
+  font-weight: var(--font-weight-bold);
+}
+
+/* =====================
+   BACKGROUND COLORS
+   ===================== */
+.bg-primary {
+  background: var(--color-primary);
+}
+
+.bg-secondary {
+  background: var(--color-secondary);
+}
+
+.bg-white {
+  background: var(--color-white);
+}
+
+.bg-text {
+  background: var(--color-text);
+}
+
+/* =====================
+   BORDER RADIUS
+   ===================== */
+.rounded-sm {
+  border-radius: var(--radius-sm);
+}
+
+.rounded-md {
+  border-radius: var(--radius-md);
+}
+
+.rounded-lg {
+  border-radius: var(--radius-lg);
+}
+
+.rounded-full {
+  border-radius: var(--radius-full);
+}
+
+/* =====================
+   SPACING - MARGIN
+   ===================== */
+.mt-0 {
+  margin-top: 0;
+}
+
+.mt-1 {
+  margin-top: var(--space-1);
+}
+
+.mt-2 {
+  margin-top: var(--space-2);
+}
+
+.mt-3 {
+  margin-top: var(--space-3);
+}
+
+.mt-4 {
+  margin-top: var(--space-4);
+}
+
+.mt-5 {
+  margin-top: var(--space-5);
+}
+
+.mt-6 {
+  margin-top: var(--space-6);
+}
+
+.mb-0 {
+  margin-bottom: 0;
+}
+
+.mb-1 {
+  margin-bottom: var(--space-1);
+}
+
+.mb-2 {
+  margin-bottom: var(--space-2);
+}
+
+.mb-3 {
+  margin-bottom: var(--space-3);
+}
+
+.mb-4 {
+  margin-bottom: var(--space-4);
+}
+
+.mb-5 {
+  margin-bottom: var(--space-5);
+}
+
+.mb-6 {
+  margin-bottom: var(--space-6);
+}
+
+/* =====================
+   SPACING - PADDING
+   ===================== */
+.p-0 {
+  padding: 0;
+}
+
+.p-1 {
+  padding: var(--space-1);
+}
+
+.p-2 {
+  padding: var(--space-2);
+}
+
+.p-3 {
+  padding: var(--space-3);
+}
+
+.p-4 {
+  padding: var(--space-4);
+}
+
+/* =====================
+   WIDTH
+   ===================== */
+.w-full {
+  width: 100%;
+}
+
+.w-auto {
+  width: auto;
+}
+
+.max-w-narrow {
+  max-width: var(--container-narrow);
+}
+
+.max-w-content {
+  max-width: var(--container-content);
+}
+
+/* =====================
+   OVERFLOW
+   ===================== */
+.overflow-hidden {
+  overflow: hidden;
+}
+
+.overflow-auto {
+  overflow: auto;
+}
+
+/* =====================
+   CURSOR
+   ===================== */
+.cursor-pointer {
+  cursor: pointer;
+}
+
+/* =====================
+   OBJECT FIT
+   ===================== */
+.object-cover {
+  object-fit: cover;
+}
+
+.object-contain {
+  object-fit: contain;
+}
+
+/* =====================
+   OPACITY
+   ===================== */
+.opacity-50 {
+  opacity: 0.5;
+}
+
+.opacity-75 {
+  opacity: 0.75;
+}
+
+.opacity-100 {
+  opacity: 1;
+}
+
+/* =====================
+   DIVIDER
+   ===================== */
+.divider {
+  background: var(--color-primary);
+  border-radius: var(--radius-full);
+  height: calc(var(--space-1) / 2);
+  margin: var(--space-3) auto;
+  width: calc(var(--space-6) - calc(var(--space-1) / 2));
+}
+
+.divider--left {
+  margin-left: 0;
+  margin-right: auto;
+}
