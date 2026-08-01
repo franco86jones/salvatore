@@ -1397,3 +1397,133 @@
   max-width: none;
   padding: 0 var(--space-3) var(--space-3);
 }
+
+/* ===================== RECETAS ===================== */
+.recetas-coming-soon {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  padding-block: var(--space-6);
+  text-align: center;
+}
+
+.recetas-coming-soon__icon {
+  align-items: center;
+  background: var(--color-secondary);
+  border-radius: var(--radius-full);
+  display: flex;
+  height: calc(var(--space-5) + var(--space-4));
+  justify-content: center;
+  margin-bottom: var(--space-2);
+  width: calc(var(--space-5) + var(--space-4));
+}
+
+.recetas-coming-soon__icon svg {
+  color: var(--color-primary);
+}
+
+.recetas-coming-soon__heading {
+  color: var(--color-text);
+  font-family: var(--font-heading);
+  font-size: var(--font-size-3xl);
+  font-weight: var(--font-weight-bold);
+  max-width: none;
+}
+
+.recetas-coming-soon__text {
+  color: var(--color-text-light);
+  font-size: var(--font-size-md);
+  line-height: var(--line-height-loose);
+  margin: 0 auto;
+  max-width: calc(var(--container-narrow) - var(--space-7) - var(--space-4) - var(--space-1));
+}
+
+/* ===================== DISTRIBUCION ===================== */
+.distribucion-clients {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  margin-top: var(--space-4);
+}
+
+.distribucion-clients__item {
+  align-items: center;
+  color: var(--color-text);
+  display: flex;
+  font-size: var(--font-size-md);
+  font-weight: var(--font-weight-medium);
+  gap: var(--space-3);
+}
+
+.distribucion-clients__item svg {
+  color: var(--color-primary);
+  flex-shrink: 0;
+}
+
+.distribucion-benefits__list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.distribucion-benefits__item {
+  align-items: flex-start;
+  display: flex;
+  gap: var(--space-3);
+}
+
+.distribucion-benefits__icon {
+  align-items: center;
+  background: var(--color-secondary);
+  border-radius: var(--radius-full);
+  display: flex;
+  flex-shrink: 0;
+  height: var(--space-4);
+  justify-content: center;
+  margin-top: calc(var(--space-1) / 4);
+  width: var(--space-4);
+}
+
+.distribucion-benefits__icon svg {
+  color: var(--color-primary);
+  height: calc(var(--space-2) + calc(var(--space-1) / 4));
+  width: calc(var(--space-2) + calc(var(--space-1) / 4));
+}
+
+.distribucion-benefits__item strong {
+  color: var(--color-text);
+  display: block;
+  font-weight: var(--font-weight-semibold);
+  margin-bottom: var(--space-1);
+}
+
+.distribucion-benefits__item p {
+  color: var(--color-text-light);
+  font-size: var(--font-size-sm);
+  line-height: var(--line-height-loose);
+  max-width: none;
+}
+
+/* ===================== GALERIA ===================== */
+.galeria-note {
+  color: var(--color-text-light);
+  font-size: var(--font-size-md);
+  max-width: none;
+  padding-block: var(--space-4);
+  text-align: center;
+}
+
+.galeria-note a {
+  color: var(--color-primary);
+  text-decoration: underline;
+  transition: color var(--transition-fast);
+}
+
+.galeria-note a:hover {
+  color: var(--color-primary-dark);
+}
+
+.galeria-instagram {
+  background: var(--color-secondary);
+}

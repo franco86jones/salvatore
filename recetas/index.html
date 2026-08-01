@@ -4,7 +4,9 @@
   <meta charset="UTF-8">
   <base href="/salvatore/">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Delicatessen Salvatore</title>
+  <title>Recetas &mdash; Delicatessen Salvatore</title>
+  <meta name="description" content="Pr&oacute;ximamente compartiremos recetas artesanales con nuestros quesos. Insp&iacute;rate con los sabores de Jalisco.">
+  <meta name="robots" content="noindex">
   <link rel="stylesheet" href="assets/css/variables.css">
   <link rel="stylesheet" href="assets/css/base.css">
   <link rel="stylesheet" href="assets/css/layout.css">
@@ -91,8 +93,76 @@
       </nav>
     </div>
   </header>
-  <!-- MAIN CONTENT -->
   <main>
+    <section class="hero hero--short section--with-header-offset" aria-label="Recetas con Quesos Salvatore">
+      <div class="hero__bg">
+        <img
+          src="assets/images/hero/products/hero-brie.jpg"
+          alt="Fondo artesanal para Recetas con Quesos Salvatore"
+          width="1920"
+          height="600"
+          loading="eager"
+          fetchpriority="high"
+        >
+      </div>
+      <div class="hero__overlay" aria-hidden="true"></div>
+      <div class="hero__content">
+        <div class="container">
+          <div class="hero__text">
+            <span class="hero__label">En la cocina</span>
+            <h1 class="hero__headline">Recetas con Quesos Salvatore</h1>
+            <p class="hero__subheadline">Inspiraci&oacute;n gourmet directa del productor</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <nav class="breadcrumb" aria-label="Ruta de navegaci&oacute;n">
+      <div class="container">
+        <ol class="breadcrumb__list">
+          <li class="breadcrumb__item">
+            <a href="" class="breadcrumb__link">Inicio</a>
+          </li>
+          <li class="breadcrumb__item breadcrumb__item--current" aria-current="page">
+            Recetas
+          </li>
+        </ol>
+      </div>
+    </nav>
+
+    <section class="section">
+      <div class="container--narrow">
+        <div class="recetas-coming-soon">
+          <div class="recetas-coming-soon__icon" aria-hidden="true">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="64" height="64" aria-hidden="true">
+              <path d="M18.06 22.99h1.66c.84 0 1.53-.64 1.63-1.46L23 5.05h-5V1h-1.97v4.05h-4.97l.3 2.34c1.71.47 3.31 1.32 4.27 2.26 1.44 1.42 2.43 2.89 2.43 5.29v8.05zM1 21.99V21h15.03v.99c0 .55-.45 1-1.01 1H2.01c-.56 0-1.01-.45-1.01-1zm15.03-7c0-8-15.03-8-15.03 0h15.03zM1.02 17h15v2h-15z"/>
+            </svg>
+          </div>
+          <span class="section-title__label">Pr&oacute;ximamente</span>
+          <h2 class="recetas-coming-soon__heading">Recetas en camino</h2>
+          <p class="recetas-coming-soon__text">Estamos preparando una colecci&oacute;n de recetas artesanales con nuestros quesos, desde entradas elegantes hasta platillos principales que har&aacute;n brillar cada variedad de nuestra familia Salvatore.</p>
+          <p class="recetas-coming-soon__text">Mientras tanto, s&iacute;guenos en Instagram para ver c&oacute;mo usamos nuestros quesos en la cocina del d&iacute;a a d&iacute;a.</p>
+          <div class="hero__ctas hero__ctas--center">
+            <a href="productos/" class="btn btn--primary">Ver nuestros quesos</a>
+            <a href="https://instagram.com/quesosfinossalvatore" class="btn btn--secondary" target="_blank" rel="noopener noreferrer">S&iacute;guenos en Instagram</a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="section cta-banner" aria-labelledby="cta-heading">
+      <div class="container">
+        <div class="cta-banner__inner section-title--center">
+          <span class="section-title__label">Hablemos</span>
+          <h2 class="cta-banner__heading" id="cta-heading">&iquest;Tienes dudas sobre c&oacute;mo usar nuestros quesos?</h2>
+          <p class="cta-banner__text">Cont&aacute;ctanos y con gusto te recomendamos el queso perfecto para tu receta.</p>
+          <div class="hero__ctas hero__ctas--center">
+            <a href="https://wa.me/5213339732063" class="btn btn--primary" target="_blank" rel="noopener noreferrer">Escr&iacute;benos por WhatsApp</a>
+            <a href="productos/" class="btn btn--secondary">Ver productos</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
   </main>
   <footer class="footer">
     <div class="footer__top">
