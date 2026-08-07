@@ -1,8 +1,17 @@
 {
   "name": "Delicatessen Salvatore",
   "short_name": "Salvatore",
+  "description": "Quesos artesanales de cabra, vaca y oveja elaborados en Jalisco, México desde 2012.",
   "start_url": "/",
   "display": "standalone",
-  "background_color": "#ffffff",
-  "theme_color": "#6B1F2A"
+  "background_color": "#F5EDD6",
+  "theme_color": "#6B1F2A",
+  "icons": [
+    {
+      "src": "assets/icons/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
 }
